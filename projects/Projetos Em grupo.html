@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainbase - Projetos em Grupo</title>
+    <link href="ProjetosEmgrupo.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #546a7b;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .logout-btn {
+            background-color: #ccc;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .main-content {
+            text-align: center;
+            padding: 20px;
+        }
+        .main-content h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+        .project-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .project-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .project-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .calendar-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #ccc;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .calendar-content {
+            display: none;
+            position: fixed;
+            bottom: 60px;
+            left: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 1000;
+        }
+        .calendar-content.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="logout-btn">Logout</button>
+        <h1>BRAINBASE</h1>
+    </div>
+    <div class="main-content">
+        <h2>Projetos em grupo</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <img src="icon1.png" alt="Projeto 1">
+                <div>
+                    <img src="user1.png" alt="User 1" style="width: 20px; height: 20px; border-radius: 50%;">
+                    <img src="user2.png" alt="User 2" style="width: 20px; height: 20px; border-radius: 50%;">
+                    <img src="user3.png" alt="User 3" style="width: 20px; height: 20px; border-radius: 50%;">
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="icon2.png" alt="Projeto 2">
+                <div>
+                    <img src="user4.png" alt="User 4" style="width: 20px; height: 20px; border-radius: 50%;">
+                    <img src="user5.png" alt="User 5" style="width: 20px; height: 20px; border-radius: 50%;">
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="icon3.png" alt="Projeto 3">
+                <div>
+                    <img src="user6.png" alt="User 6" style="width: 20px; height: 20px; border-radius: 50%;">
+                    <img src="user7.png" alt="User 7" style="width: 20px; height: 20px; border-radius: 50%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="calendar-btn">Calendário</button>
+    <div class="calendar-content">
+        <div id="calendar"></div>
+    </div>
+    <script src="raphael.js"></script>
+    
+   
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainbase - Projetos</title>
+    <link rel="stylesheet" href="Projetos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="logout">Logout</button>
+            <h1>BRAINBASE</h1>
+        </div>
+        <div class="content">
+            <div class="projects-header">
+                <h2>Projetos</h2>
+                <button class="new-project">+ NOVO PROJETO</button>
+            </div>
+            <div class="projects-icons">
+                <div class="project-icon">
+                    <img src="game-icon.png" alt="Game Project">
+                </div>
+                <div class="project-icon">
+                    <img src="oop-icon.png" alt="OOP Project">
+                </div>
+                <div class="project-icon">
+                    <img src="sql-icon.png" alt="SQL Project">
+                </div>
+            </div>
+        </div>
+        <div class="calendar-popup">
+            <button class="calendar-btn">Calendário</button>
+            <div class="calendar-content">
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
+    <script>
+        // JavaScript to toggle the calendar popup
+        document.querySelector('.calendar-btn').addEventListener('click', function() {
+            document.querySelector('.calendar-content').classList.toggle('show');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+
+            calendar.render();
+        });
+    </script>
+</body>
+</html>

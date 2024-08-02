@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5a5a5a;
+    padding: 10px;
+}
+
+.logout {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header h1 {
+    color: #ffffff;
+    margin: 0;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tasks-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.new-project {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tasks-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.tasks-table th, .tasks-table td {
+    border: 1px solid #cccccc;
+    padding: 15px;
+    text-align: left;
+}
+
+.tasks-table th {
+    background-color: #f8f8f8;
+    font-size: 18px;
+}
+
+.tasks-table td {
+    height: 50px;
+}
