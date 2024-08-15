@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainbase Dashboard</title>
+  <link rel="stylesheet" href="Menuincial.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header>
+      <button class="logout-btn">Logout</button>
+      <h1>BRAINBASE</h1>
+    </header>
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Em andamento</a></li>
+          <li><a href="#">Pendentes</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <section class="cards">
+        <button class="card">
+          <h2>Tarefas</h2>
+          <p>Organizarem suas tarefas por disciplina, prioridade e data de vencimento.</p>
+        </button>
+        <button class="card">
+          <h2>Projetos</h2>
+          <p>Gerenciamento de projetos pessoais e profissionais.</p>
+        </button>
+        <button class="card">
+          <h2>Projetos em grupo</h2>
+          <p>Formação de grupos de estudo e trabalho em projetos colaborativos.</p>
+        </button>
+      </section>
+    </main>
+    <div class="calendar-icon" onclick="toggleCalendar()">
+      <img src="calendar-icon.png" alt="Calendário">
+    </div>
+    <div class="calendar-popup" id="calendarPopup">
+      <div class="calendar-header">
+        <span>JUNHO 2024</span>
+        <button onclick="toggleCalendar()">Fechar</button>
+      </div>
+      <div class="calendar-content">
+        <table>
+          <thead>
+            <tr>
+              <th>DOM</th>
+              <th>SEG</th>
+              <th>TER</th>
+              <th>QUA</th>
+              <th>QUI</th>
+              <th>SEX</th>
+              <th>SAB</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td>
+            </tr>
+            <tr>
+              <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+            </tr>
+            <tr>
+              <td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td>
+            </tr>
+            <tr>
+              <td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+            </tr>
+            <tr>
+              <td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleCalendar() {
+      const calendarPopup = document.getElementById('calendarPopup')
+      calendarPopup.classList.toggle('show')
+    }
+  </script>
+</body>
+</html>

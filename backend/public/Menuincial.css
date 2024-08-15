@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ccc, #fff);
+  }
+  
+  .dashboard-container {
+    display: grid;
+    grid-template-areas:
+      'header header'
+      'sidebar main';
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+  }
+  
+  header {
+    grid-area: header;
+    background-color: #536878;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+  
+  .logout-btn {
+    background-color: #7a8fa6;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  aside {
+    grid-area: sidebar;
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+  }
+  
+  aside nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  aside nav ul li {
+    margin-bottom: 20px;
+  }
+  
+  aside nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  main {
+    grid-area: main;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('brainbase-background.png') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card h2 {
+    margin-top: 0;
+  }
+  
+  .calendar-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
+  
+  .calendar-popup {
+    position: fixed;
+    bottom: 60px;
+    left: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: none;
+    width: 300px;
+  }
+  
+  .calendar-popup.show {
+    display: block;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #536878;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .calendar-content {
+    padding: 10px;
+  }
+  
+  .calendar-content table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .calendar-content th,
+  .calendar-content td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  .calendar-content th {
+    background-color: #f0f0f0;
+  }
+  
+  .calendar-content td {
+    height: 30px;
+  }
